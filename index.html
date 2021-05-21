@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="topnav">
+
+        <a>Bookshelf Apps</a>
+
+        <div class="search-container">
+            <form id="searchBook">
+                <input id="searchBookTitle" type="text" placeholder="Search.." name="search">
+                <button id="searchSubmit" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <main>
+        <section class="input_section">
+            <h2>Insert New Book</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="inputBookTitle">Title</label>
+                    <input id="inputBookTitle" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor">Author</label>
+                    <input id="inputBookAuthor" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookYear">Year</label>
+                    <input id="inputBookYear" type="number" required>
+                </div>
+                <div class="input_inline">
+                    <label for="inputBookIsComplete">already read the book</label>
+                    <input id="inputBookIsComplete" type="checkbox">
+                </div>
+                <button id="bookSubmit" type="submit">add Book</button>
+            </form>
+        </section>
+
+
+        <section class="book_shelf">
+            <h2>not finished</h2>
+
+            <div id="incompleteBookshelfList" class="book_list">
+            </div>
+        </section>
+
+        <section class="book_shelf">
+            <h2>finished</h2>
+
+            <div id="completeBookshelfList" class="book_list">
+            </div>
+        </section>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
